@@ -1,7 +1,7 @@
 {
   "name": "update-demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "A desktop app for learning GitHub releases and updates",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,5 +18,34 @@
   },
   "dependencies": {
     "electron-updater": "^6.8.9"
+  },
+  "build": {
+    "appId": "com.updatedemo.desktop",
+    "productName": "Update Demo",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "styles.css",
+      "renderer.js"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "HishamSunjeq",
+        "repo": "update-demo"
+      }
+    ]
   }
 }
