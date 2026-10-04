@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Update Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="renderer.js" defer></script>
+</head>
+<script src="renderer.js" defer></script>
+
+<body>
+    <aside>
+        <div class="logo">Update Demo</div>
+        <button class="nav active" data-page="home">Home</button>
+        <button class="nav" data-page="settings">Settings</button>
+    </aside>
+
+    <main>
+        <section id="home">
+            <span class="label">YOUR FIRST DESKTOP APP</span>
+            <h1>Hello, Hisham.</h1>
+            <p>This is version <span class="app-version">…</span> of your app.</p>
+            <div class="card">
+                <h2>It starts here</h2>
+                <p>Later, we’ll change this message and deliver it through an update.</p>
+            </div>
+        </section>
+
+        <section id="settings" hidden>
+            <span class="label">PREFERENCES</span>
+            <h1>Settings</h1>
+            <p>Manage your application updates.</p>
+            <div class="card">
+                <h2>Application updates</h2>
+                <p>Installed version: <strong class="app-version">…</strong></p>
+                <button id="check-update" class="primary">Check for updates</button>
+                <p id="update-status" role="status">
+                    Ready to check for updates.
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
